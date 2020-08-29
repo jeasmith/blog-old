@@ -1,0 +1,13 @@
+.header {
+    position: absolute;
+    width: 100%;
+    height: 2rem;
+    background-color: red;
+    padding: 0.2rem;
+}
+
+.primary-link, .site-name {
+    float: left;
+    padding: 0 1rem;
+    margin: 0 1rem;
+}
