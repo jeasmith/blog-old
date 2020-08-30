@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Header, HeaderProps } from './components/header';
+import './App.scss';
+import { Footer, FooterProps } from './components/footer';
 
-function App() {
+function App(): JSX.Element {
+  const headerProps: HeaderProps = {
+    siteName: 'JamieDoesDev',
+    primaryLinks: [{text: 'link1', link: {href: 'https://example.com'}}]
+  };
+
+  const footerProps: FooterProps = {
+    title: 'Footer'
+  };
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header {...headerProps} />
+      
+      <Footer {...footerProps} />
     </div>
   );
 }
