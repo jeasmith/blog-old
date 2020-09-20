@@ -1,23 +1,13 @@
 import React from 'react';
-import { Header, HeaderProps } from './components/header';
 import './App.scss';
-import { Footer, FooterProps } from './components/footer';
+import { HoldingMessage } from './components/holdingpage';
 
 function App(): JSX.Element {
-  const headerProps: HeaderProps = {
-    siteName: 'JamieDoesDev',
-    primaryLinks: [{text: 'link1', link: {href: 'https://example.com'}}]
-  };
-
-  const footerProps: FooterProps = {
-    title: 'Footer'
-  };
-  
   return (
-    <div className="App">
-      <Header {...headerProps} />
-      
-      <Footer {...footerProps} />
+    <div className="app">
+      <div className="layout">
+        <HoldingMessage />
+      </div>
     </div>
   );
 }
